@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid & Flebox</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffe6d1;
+      }
+      .grid-container {
+        display: grid;
+        gap: 1em;
+        justify-content: center;
+        grid-auto-columns: minmax(autofit, 250px);
+        grid-template-areas:
+          "grid-props"
+          "item-grid-props"
+          "flex-props"
+          "item-flex-props";
+        padding: 1rem;
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin: 30px 30px;
+        text-align: center;
+      }
+      .grid-container li {
+        font-weight: 500;
+        margin: 20px 25px;
+        font-size: 15px;
+        color: rgb(53, 53, 53);
+      }
+
+      .css-grid-props {
+        background-color: #f29c50;
+        padding: 15px 15px;
+        box-shadow: 8px 10px 15px rgb(76, 75, 75);
+      }
+      .grid-props-list {
+        background-color: #f2c3a7;
+        padding: 35px 35px;
+      }
+
+      .css-grid-items-props {
+        background-color: #f2c3a7;
+        padding: 15px 15px;
+        box-shadow: 8px 10px 15px rgb(76, 75, 75);
+      }
+      .grid-items-props-list {
+        border-top: 5px solid #f29c50;
+        padding: 35px 35px;
+      }
+
+      .flexbox-props {
+        background-color: #f2c288;
+        padding: 15px 15px;
+        box-shadow: 8px 10px 15px rgb(76, 75, 75);
+      }
+      .flexbox-props-list {
+        background-color: #fdeb94;
+        padding: 35px 35px;
+      }
+
+      .flexbox-items-props {
+        background-color: #fdeb94;
+        padding: 15px 15px;
+        box-shadow: 8px 10px 15px rgb(76, 75, 75);
+      }
+      .flexbox-items-props-list {
+        border-top: 5px solid #f2c288;
+        padding: 35px 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid & Flexbox Cheat Sheet | by Armel Nzawou</h1>
+    <div class="grid-container">
+      <div class="css-grid-props" style="grid-area: grid-props">
+        <h2>CSS Grid - Container Properties</h2>
+        <ul class="grid-props-list">
+          <li>display: grid | inline-grid</li>
+          <li>
+            grid-template-columns / grid-template-rows
+            <ul>
+              <li>Example: grid-template-columns: repeat(3, 1fr);</li>
+            </ul>
+          </li>
+          <li>grid-template-areas</li>
+          <li>grid-template</li>
+          <li>grid-column-gap / grid-row-gap / gap</li>
+          <li>justify-items → start | end | center | stretch</li>
+          <li>align-items → start | end | center | stretch</li>
+          <li>place-items → shorthand for align-items + justify-items</li>
+          <li>
+            justify-content → start | end | center | space-between |
+            space-around | space-evenly
+          </li>
+          <li>align-content → same values as justify-content</li>
+          <li>place-content → shorthand for align-content + justify-content</li>
+          <li>grid-auto-columns / grid-auto-rows</li>
+          <li>grid-auto-flow → row | column | dense</li>
+        </ul>
+      </div>
+      <div class="css-grid-items-props" style="grid-area: item-grid-props">
+        <h2>CSS Grid - Items properties</h2>
+        <ul class="grid-items-props-list">
+          <li>grid-column-start / grid-column-end</li>
+          <li>grid-row-start / grid-row-end</li>
+          <li>grid-column / grid-row → shorthand</li>
+          <li>grid-area</li>
+          <li>justify-self → start | end | center | stretch</li>
+          <li>align-self → same values as above</li>
+          <li>place-self → shorthand for align-self + justify-self</li>
+        </ul>
+      </div>
+      <div class="flexbox-props" style="grid-area: flex-props">
+        <h2>Flexbox - Container properties</h2>
+        <ul class="flexbox-props-list">
+          <li>display: flex | inline-flex</li>
+          <li>flex-direction → row | row-reverse | column | column-reverse</li>
+          <li>flex-wrap → nowrap | wrap | wrap-reverse</li>
+          <li>flex-flow → shorthand for flex-direction + flex-wrap</li>
+          <li>
+            justify-content → flex-start | flex-end | center | space-between |
+            space-around | space-evenly
+          </li>
+          <li>
+            align-items → flex-start | flex-end | center | baseline | stretch
+          </li>
+          <li>
+            align-content → flex-start | flex-end | center | space-between |
+            space-around | stretch
+          </li>
+          <li>gap → spacing between flex items</li>
+        </ul>
+      </div>
+      <div class="flexbox-items-props" style="grid-area: item-flex-props">
+        <h2>Flexbox - Items properties</h2>
+        <ul class="flexbox-items-props-list">
+          <li>order</li>
+          <li>flex-grow</li>
+          <li>flex → shorthand for grow, shrink, basis</li>
+          <li>
+            align-self → auto | flex-start | flex-end | center | baseline |
+            stretch
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
